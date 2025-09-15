@@ -1,0 +1,267 @@
+/* 表格容器 */
+.leaderboard-table-container {
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+}
+
+/* 表格样式 */
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: transparent;
+}
+
+/* 表头样式 */
+.leaderboard-table thead {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+}
+
+.leaderboard-table th {
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid #333333;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 可排序表头样式 */
+.sortable-header {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  user-select: none;
+}
+
+.sortable-header:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.sortable-header.active {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+}
+
+.sortable-header.active::after {
+  content: '✓';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+/* 表格行样式 */
+.table-row {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.01);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.table-row:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* 表格单元格通用样式 */
+.leaderboard-table td {
+  padding: 12px 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+/* 排名列 */
+.rank-column {
+  width: 80px;
+}
+
+.rank-cell {
+  text-align: center;
+}
+
+.rank-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.rank-number {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.rank-badge {
+  font-size: 1.2rem;
+}
+
+.rank-1 {
+  filter: drop-shadow(0 0 5px gold);
+}
+
+.rank-2 {
+  filter: drop-shadow(0 0 5px silver);
+}
+
+.rank-3 {
+  filter: drop-shadow(0 0 5px #cd7f32);
+}
+
+/* 钱包列 */
+.wallet-column {
+  width: 400px;
+  text-align: left;
+}
+
+.wallet-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.wallet-address {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 0.9rem;
+  word-break: break-all;
+  line-height: 1.2;
+  white-space: pre-wrap;
+}
+
+
+/* PnL列 */
+.pnl-column {
+  width: 120px;
+}
+
+.pnl-cell {
+  padding: 8px 10px;
+}
+
+.pnl-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.pnl-percentage {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.pnl-amount {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* PnL颜色 */
+.positive {
+  color: #4CAF50;
+}
+
+.positive .pnl-percentage,
+.positive .pnl-amount {
+  color: #4CAF50;
+}
+
+.negative {
+  color: #f44336;
+}
+
+.negative .pnl-percentage,
+.negative .pnl-amount {
+  color: #f44336;
+}
+
+.neutral {
+  color: #888888;
+}
+
+
+/* 胜率列 */
+.winrate-column {
+  width: 100px;
+}
+
+.winrate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winrate-percentage {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* 交易次数列 */
+.txs-column {
+  width: 100px;
+}
+
+.txs-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.txs-total {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.txs-breakdown {
+  font-size: 0.75rem;
+  color: #888888;
+}
+
+.txs-profitable {
+  color: #4CAF50;
+}
+
+.txs-loss {
+  color: #f44336;
+}
+
+
+/* 滚动条样式 */
+.leaderboard-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.leaderboard-table-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.leaderboard-table-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.leaderboard-table-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

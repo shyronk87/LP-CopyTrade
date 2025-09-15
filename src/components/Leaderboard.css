@@ -1,0 +1,47 @@
+/* 排行榜主容器 */
+.leaderboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #ffffff;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.leaderboard-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.leaderboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffffff 0%, #888888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 加载和错误状态 */
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #ff4444;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .leaderboard-container {
+    padding: 10px;
+  }
+  
+  .leaderboard-header h1 {
+    font-size: 1.8rem;
+  }
+}
