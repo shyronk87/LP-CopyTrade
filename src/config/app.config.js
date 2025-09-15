@@ -1,18 +1,19 @@
 // 应用配置文件
-import { env } from './env.config';
-
 export const appConfig = {
-  // 应用基础路径 - 从环境配置获取
-  basePath: env.basePath,
+  // 应用基础路径
+  basePath: '/leaderboard',
   
   // 应用标题
   title: 'LP盈利排行榜',
   
-  // API配置 - 从环境配置获取
+  // API配置
   api: {
-    baseURL: env.apiBaseURL,
+    baseURL: 'http://localhost:3000/v3/leaderboards',
     timeout: 10000,
   },
+  
+  // 前端React应用端口
+  port: 3001,
   
   // 分页配置
   pagination: {
