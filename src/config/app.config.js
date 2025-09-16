@@ -8,7 +8,7 @@ export const appConfig = {
   
   // API配置
   api: {
-    baseURL: 'http://localhost:3000/v3/leaderboards',
+    baseURL: '/v3/leaderboards',
     timeout: 10000,
   },
   
